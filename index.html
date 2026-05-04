@@ -539,124 +539,41 @@
         }
 
         @media (max-width: 768px) {
-            .hero {
-                padding: 40px 20px;
-            }
-
             .hero h1 {
-                font-size: 2.2em;
-                margin-bottom: 15px;
+                font-size: 2.5em;
             }
 
             .hero .subtitle {
-                font-size: 1.1em;
-                margin-bottom: 30px;
-            }
-
-            .hero .message {
-                font-size: 1em;
-                margin-bottom: 40px;
-            }
-
-            .section-title {
-                font-size: 1.8em;
-                margin-bottom: 40px;
-            }
-
-            .map-container h2 {
-                font-size: 1.8em;
-                margin-bottom: 30px;
-            }
-
-            .map-section {
-                padding: 50px 15px;
-            }
-
-            .content {
-                padding: 50px 15px;
+                font-size: 1.2em;
             }
 
             .clocks-container {
                 gap: 15px;
             }
 
-            .clock {
-                padding: 25px 15px;
-            }
-
             .route {
                 grid-template-columns: 1fr;
-                gap: 10px;
+                gap: 20px;
             }
 
             .route-arrow {
                 transform: rotate(90deg);
-                font-size: 1.5em;
-                order: 2;
-                margin: 5px 0;
-            }
-
-            .airport:first-child {
-                order: 1;
-            }
-
-            .airport:last-child {
-                order: 3;
             }
 
             .arrow {
                 transform: rotate(90deg);
-                font-size: 1.5em;
-                order: 2;
-                margin: 5px 0;
-            }
-
-            .date-box:first-child {
-                order: 1;
-            }
-
-            .date-box:last-child {
-                order: 3;
             }
 
             .airport-code-large {
-                font-size: 2.2em;
-            }
-
-            .airline-name {
-                font-size: 1.3em;
-            }
-
-            .hotel-name {
-                font-size: 1.5em;
-            }
-
-            .boat-route {
-                font-size: 1.5em;
+                font-size: 2.5em;
             }
 
             .dates-row {
                 grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .date-box {
-                padding: 15px;
             }
 
             .details-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            /* Mobile-specific boat transfer layout */
-            .ticket.boat .details-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 15px;
-            }
-
-            .ticket.boat .detail:first-child {
-                grid-column: 1 / -1;
             }
 
             .airline-row {
@@ -674,180 +591,6 @@
 
             .map {
                 height: 400px;
-                border-radius: 15px;
-            }
-
-            .ticket {
-                margin-bottom: 30px;
-                border-radius: 15px;
-            }
-
-            .ticket-header {
-                padding: 20px !important;
-            }
-
-            .ticket-body {
-                padding: 25px !important;
-            }
-
-            .footer {
-                padding: 50px 20px;
-            }
-
-            .footer p {
-                font-size: 1em;
-            }
-        }
-
-        /* Tablet Optimizations */
-        @media (max-width: 1024px) {
-            .hero h1 {
-                font-size: 3em;
-            }
-
-            .hero .subtitle {
-                font-size: 1.3em;
-            }
-
-            .section-title {
-                font-size: 2.2em;
-            }
-
-            .map-container h2 {
-                font-size: 2.2em;
-            }
-
-            .details-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
-
-        /* Small Phone Optimizations */
-        @media (max-width: 480px) {
-            .hero {
-                padding: 30px 15px;
-            }
-
-            .hero h1 {
-                font-size: 1.8em;
-                margin-bottom: 12px;
-            }
-
-            .hero .subtitle {
-                font-size: 1em;
-                margin-bottom: 25px;
-            }
-
-            .hero .message {
-                font-size: 0.95em;
-                margin-bottom: 30px;
-            }
-
-            .section-title {
-                font-size: 1.5em;
-                margin-bottom: 30px;
-            }
-
-            .map-container h2 {
-                font-size: 1.5em;
-                margin-bottom: 25px;
-            }
-
-            .map-section {
-                padding: 40px 12px;
-            }
-
-            .content {
-                padding: 40px 12px;
-            }
-
-            .clock {
-                padding: 20px 12px;
-            }
-
-            .clock-time {
-                font-size: 1.3em;
-            }
-
-            .clock-city {
-                font-size: 0.7em;
-            }
-
-            .airport-code-large {
-                font-size: 1.8em;
-            }
-
-            .city-name {
-                font-size: 0.85em;
-            }
-
-            .airline-name {
-                font-size: 1.1em;
-            }
-
-            .airline-logo {
-                width: 55px;
-                height: 55px;
-            }
-
-            .flight-number {
-                font-size: 0.95em;
-                padding: 6px 14px;
-            }
-
-            .hotel-name {
-                font-size: 1.3em;
-            }
-
-            .boat-route {
-                font-size: 1.3em;
-            }
-
-            .detail-value {
-                font-size: 1em;
-            }
-
-            .detail-label {
-                font-size: 0.6em;
-            }
-
-            .map {
-                height: 300px;
-                border-radius: 12px;
-            }
-
-            .ticket {
-                margin-bottom: 25px;
-                border-radius: 12px;
-            }
-
-            .ticket-header {
-                padding: 18px !important;
-            }
-
-            .ticket-body {
-                padding: 20px !important;
-            }
-
-            .ticket.flight .ticket-header {
-                padding: 18px 20px 16px !important;
-            }
-
-            .ticket.flight .ticket-body {
-                padding: 18px 20px 22px !important;
-            }
-
-            .date-box {
-                padding: 20px;
-            }
-
-            .footer {
-                padding: 40px 15px;
-            }
-
-            .footer p {
-                font-size: 0.95em;
             }
         }
     </style>
@@ -1430,9 +1173,9 @@
 
         // Initialize Leaflet Map
         const map = L.map('map', {
-            center: [20, 180],
-            zoom: 1.5,
-            minZoom: 1,
+            center: [25, 180],
+            zoom: 2,
+            minZoom: 2,
             maxZoom: 10,
             worldCopyJump: false,
             scrollWheelZoom: false
