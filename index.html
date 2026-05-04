@@ -30,9 +30,41 @@
             align-items: center;
             text-align: center;
             padding: 60px 20px;
-            background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+            background: linear-gradient(135deg, rgba(102, 187, 106, 0.85) 0%, rgba(67, 160, 71, 0.9) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%2343a047" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
             color: white;
+            position: relative;
         }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        .scroll-indicator svg {
+            width: 40px;
+            height: 40px;
+            opacity: 0.9;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
 
         .hero h1 {
             font-size: 3.5em;
@@ -57,7 +89,74 @@
             margin-bottom: 50px;
         }
 
+        /* Letter Section */
+        .letter-section {
+            background: linear-gradient(to bottom, #fafafa, #ffffff);
+            padding: 80px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .letter-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e8e8e8;
+            position: relative;
+        }
+
+        .letter-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #f4d03f, #d4af37);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .letter-content {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2e4a38;
+            line-height: 1.9;
+        }
+
+        .letter-content .greeting {
+            font-size: 1.15em;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: #2e4a38;
+        }
+
+        .letter-content p {
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            color: #2e4a38;
+        }
+
+        .letter-content .signature {
+            margin-top: 35px;
+            font-style: italic;
+            color: #2e4a38;
+            font-weight: 400;
+            font-size: 1.1em;
+        }
+
+        .letter-disclaimer {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #e8e8e8;
+            font-size: 0.8em;
+            color: #777;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
         /* Trading Floor Clock Section */
+
         .clock-section {
             background: #1a1a1a;
             padding: 50px 20px;
@@ -159,7 +258,7 @@
 
         .map-container h2 {
             font-size: 2.5em;
-            font-weight: 300;
+            font-weight: 600;
             margin-bottom: 50px;
             color: #2e4a38;
         }
@@ -183,7 +282,7 @@
 
         .section-title {
             font-size: 2.5em;
-            font-weight: 300;
+            font-weight: 600;
             margin-bottom: 60px;
             text-align: center;
             color: #2e4a38;
@@ -538,6 +637,21 @@
             margin: 0 auto;
         }
 
+        .copyright-section {
+            background: #f5f5f5;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .copyright-section p {
+            font-size: 0.75em;
+            color: #888;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         @media (max-width: 768px) {
             .hero {
                 padding: 40px 20px;
@@ -558,7 +672,37 @@
                 margin-bottom: 40px;
             }
 
+            .letter-section {
+                padding: 50px 15px;
+            }
+
+            .letter-container {
+                padding: 40px 30px;
+            }
+
+            .letter-content .greeting {
+                font-size: 1.2em;
+                margin-bottom: 25px;
+            }
+
+            .letter-content p {
+                font-size: 1em;
+                margin-bottom: 18px;
+            }
+
+            .letter-content .signature {
+                margin-top: 30px;
+                font-size: 1.05em;
+            }
+
+            .letter-disclaimer {
+                margin-top: 30px;
+                padding-top: 20px;
+                font-size: 0.75em;
+            }
+
             .section-title {
+
                 font-size: 1.8em;
                 margin-bottom: 40px;
             }
@@ -851,19 +995,48 @@
             .footer p {
                 font-size: 0.95em;
             }
+
+            .copyright-section {
+                padding: 25px 15px;
+            }
+
+            .copyright-section p {
+                font-size: 0.7em;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Max & Emily's Adventure</h1>
+        <h1>Where are Max and Emily?</h1>
         <div class="subtitle">Singapore & Thailand · May 6-16, 2026</div>
-        <div class="message">
-            Hey family!<br><br>
-            We're so excited to share this journey with you. Track where we are, see our flight schedules, 
-            and know exactly when we're in the air or checking into a new hotel. We'll be updating everyone 
-            with photos and stories along the way. Miss you all already!
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" onclick="document.querySelector('.letter-section').scrollIntoView({behavior: 'smooth'})">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Letter Section -->
+    <div class="letter-section">
+        <div class="letter-container">
+            <div class="letter-content">
+                <p class="greeting">Hi Friends/Family!</p>
+                
+                <p>If you've ever asked the question, "Where is Max/Emily right now?" - for 11 days in May, wonder no more!</p>
+                
+                <p>This website includes our comprehensive flight and hotel information, complete with FlightAware links for live flight tracking* and Google Maps links to our hotels/resorts in Thailand and Singapore. So, you can track where we are at any time!</p>
+                
+                <p>Thank you for following along in our journey, even from afar - miss you already!</p>
+                
+                <p class="signature">- Max & Emily</p>
+            </div>
+            <div class="letter-disclaimer">
+                *FlightAware links will only be accurate beginning at 12 hours before departure. Otherwise, they may be tracking a different day's flight(s)
+            </div>
         </div>
     </div>
 
@@ -901,14 +1074,14 @@
     <!-- Map Section -->
     <div class="map-section">
         <div class="map-container">
-            <h2>Our Journey</h2>
+            <h2>Map of Our Journey</h2>
             <div id="map" class="map"></div>
         </div>
     </div>
 
     <!-- Travel Timeline -->
     <div class="content">
-        <h2 class="section-title">Travel Timeline</h2>
+        <h2 class="section-title">Travel Itinerary</h2>
 
         <!-- Flight 1: EWR to SFO -->
         <div class="ticket flight" id="flight-ua1558">
@@ -1358,7 +1531,7 @@
                     </div>
                     <div class="detail">
                         <div class="detail-label">Departure Time</div>
-                        <div class="detail-value">7:25 PM</div>
+                        <div class="detail-value">7:30 PM</div>
                     </div>
                     <div class="detail">
                         <div class="detail-label">Arrival Date</div>
@@ -1377,16 +1550,9 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>
-            We can't wait to experience these incredible places and share them with all of you. 
-            Thank you for being part of our journey, even from afar. Your love and support mean everything to us. 
-            We'll be thinking of you as we explore new cultures, taste amazing food, and make memories that will last a lifetime. 
-            <br><br>
-            With all our love,<br>
-            Max & Emily
-        </p>
+    <!-- Copyright/Easter Egg Section -->
+    <div class="copyright-section">
+        <p>Hello! Thank you for reading to the bottom of this site. If you would like a complimentary jar of Max's next batch of moonshine, text Max, "Moonshine Please!" to reserve one. (21+ only)</p>
     </div>
 
     <script>
