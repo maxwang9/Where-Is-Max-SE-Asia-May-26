@@ -658,7 +658,7 @@
             }
 
             .scroll-indicator {
-                bottom: 80px;
+                bottom: 120px;
             }
 
             .hero h1 {
@@ -751,28 +751,18 @@
             }
 
             .dates-row {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
+                display: grid;
+                grid-template-columns: 1fr auto 1fr;
+                gap: 15px;
+                align-items: center;
             }
 
             .date-box {
                 padding: 15px;
             }
 
-            .date-box:first-child {
-                order: 1;
-            }
-
             .arrow {
-                transform: rotate(90deg);
                 font-size: 1.5em;
-                order: 2;
-                margin: 5px 0;
-            }
-
-            .date-box:last-child {
-                order: 3;
             }
 
 
