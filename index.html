@@ -585,8 +585,13 @@
             }
 
             .route {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
                 gap: 10px;
+            }
+
+            .airport:first-child {
+                order: 1;
             }
 
             .route-arrow {
@@ -596,12 +601,22 @@
                 margin: 5px 0;
             }
 
-            .airport:first-child {
-                order: 1;
-            }
-
             .airport:last-child {
                 order: 3;
+            }
+
+            .dates-row {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .date-box {
+                padding: 15px;
+            }
+
+            .date-box:first-child {
+                order: 1;
             }
 
             .arrow {
@@ -609,10 +624,6 @@
                 font-size: 1.5em;
                 order: 2;
                 margin: 5px 0;
-            }
-
-            .date-box:first-child {
-                order: 1;
             }
 
             .date-box:last-child {
@@ -633,15 +644,6 @@
 
             .boat-route {
                 font-size: 1.5em;
-            }
-
-            .dates-row {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .date-box {
-                padding: 15px;
             }
 
             .details-grid {
